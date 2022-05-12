@@ -1,0 +1,13 @@
+config:
+    include:
+        - "share/input/test_input.sec.yaml"
+        - "share/train/test_train.sec.yaml"
+
+job:
+    job_name: "test_train"
+    job_type: "train"
+    save_dir: "run/test_pdnn"
+
+#input:
+#    bkg_sumofweight: 100000
+#    sig_sumofweight: 100000

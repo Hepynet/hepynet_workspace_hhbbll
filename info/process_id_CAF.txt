@@ -1,0 +1,103 @@
+<processID =  -1> @ /.;
+<processID =   0> @ /data;
+
+<processID =  10> @ /sig/?/?/nonres/bbWW;
+<processID =  11> @ /sig/?/?/res/251/bbWW;
+<processID =  12> @ /sig/?/?/res/260/bbWW;
+<processID =  13> @ /sig/?/?/res/300/bbWW;
+<processID =  14> @ /sig/?/?/res/400/bbWW;
+<processID =  15> @ /sig/?/?/res/500/bbWW;
+<processID =  16> @ /sig/?/?/res/600/bbWW;
+<processID =  17> @ /sig/?/?/res/800/bbWW;
+<processID =  18> @ /sig/?/?/res/1000/bbWW;
+<processID =  19> @ /sig/?/?/kl10/bbWW;
+
+<processID =  20> @ /sig/?/?/nonres/bbtautau;
+<processID =  21> @ /sig/?/?/res/251/bbtautau;
+<processID =  22> @ /sig/?/?/res/260/bbtautau;
+<processID =  23> @ /sig/?/?/res/300/bbtautau;
+<processID =  24> @ /sig/?/?/res/400/bbtautau;
+<processID =  25> @ /sig/?/?/res/500/bbtautau;
+<processID =  26> @ /sig/?/?/res/600/bbtautau;
+<processID =  27> @ /sig/?/?/res/800/bbtautau;
+<processID =  28> @ /sig/?/?/res/1000/bbtautau;
+<processID =  29> @ /sig/?/?/kl10/bbtautau;
+
+<processID =  30> @ /sig/?/?/nonres/bbZZ;
+<processID =  31> @ /sig/?/?/res/251/bbZZ;
+<processID =  32> @ /sig/?/?/res/260/bbZZ;
+<processID =  33> @ /sig/?/?/res/300/bbZZ;
+<processID =  34> @ /sig/?/?/res/400/bbZZ;
+<processID =  35> @ /sig/?/?/res/500/bbZZ;
+<processID =  36> @ /sig/?/?/res/600/bbZZ;
+<processID =  37> @ /sig/?/?/res/800/bbZZ;
+<processID =  38> @ /sig/?/?/res/1000/bbZZ;
+<processID =  39> @ /sig/?/?/kl10/bbZZ;
+
+<processID =  40> @ /sig/?/?/nonres/bbWW_1lep;
+<processID =  50> @ /sig/?/?/nonres/bbtautau_0lep;
+<processID =  51> @ /sig/?/?/nonres/bbtautau_1lep;
+<processID =  60> @ /sig/?/?/nonres/bbyy;
+
+<processID = 100> @ /bkg/?/?/prompt/top/ttbar;
+<processID = 101> @ /bkg/?/?/prompt/top/stop;
+<processID = 102> @ /bkg/?/?/prompt/top/ttbarV;
+<processID = 110> @ /bkg/?/?/prompt/Zee;
+<processID = 111> @ /bkg/?/?/prompt/Zmm;
+<processID = 112> @ /bkg/?/?/prompt/Ztt;
+<processID = 120> @ /bkg/?/?/prompt/diboson;
+<processID = 130> @ /bkg/?/?/nonprompt;
+<processID = 131> @ /bkg/?/?/ddFakes/data;
+<processID = 132> @ /bkg/?/?/ddFakes/mc/prompt;
+<processID = 140> @ /bkg/?/?/prompt/Higgs;
+
+<processID =  210> @ /sig/?/?/vbf_old/bbWW;
+<processID =  220> @ /sig/?/?/vbf_old/bbtautau;
+<processID =  230> @ /sig/?/?/vbf_old/bbZZ;
+
+<processID =  211> @ /sig/?/?/vbf_novhh_l1cvv1cv1/bbWW;
+<processID =  212> @ /sig/?/?/vbf_novhh_l1cvv0cv1/bbWW;
+<processID =  213> @ /sig/?/?/vbf_novhh_l1cvv0p5cv1/bbWW;
+<processID =  214> @ /sig/?/?/vbf_novhh_l1cvv1p5cv1/bbWW;
+<processID =  215> @ /sig/?/?/vbf_novhh_l1cvv2cv1/bbWW;
+<processID =  216> @ /sig/?/?/vbf_novhh_l1cvv3cv1/bbWW;
+<processID =  217> @ /sig/?/?/vbf_novhh_l0cvv1cv1/bbWW;
+<processID =  218> @ /sig/?/?/vbf_novhh_l2cvv1cv1/bbWW;
+<processID =  219> @ /sig/?/?/vbf_novhh_l10cvv1cv1/bbWW;
+<processID =  240> @ /sig/?/?/vbf_novhh_l1cvv1cv0p5/bbWW;
+<processID =  241> @ /sig/?/?/vbf_novhh_l1cvv1cv1p5/bbWW;
+<processID =  242> @ /sig/?/?/vbf_novhh_l0cvv0cv1/bbWW;
+
+<processID =  221> @ /sig/?/?/vbf_novhh_l1cvv1cv1/bbtautau;
+<processID =  222> @ /sig/?/?/vbf_novhh_l1cvv0cv1/bbtautau;
+<processID =  223> @ /sig/?/?/vbf_novhh_l1cvv0p5cv1/bbtautau;
+<processID =  224> @ /sig/?/?/vbf_novhh_l1cvv1p5cv1/bbtautau;
+<processID =  225> @ /sig/?/?/vbf_novhh_l1cvv2cv1/bbtautau;
+<processID =  226> @ /sig/?/?/vbf_novhh_l1cvv3cv1/bbtautau;
+<processID =  227> @ /sig/?/?/vbf_novhh_l0cvv1cv1/bbtautau;
+<processID =  228> @ /sig/?/?/vbf_novhh_l2cvv1cv1/bbtautau;
+<processID =  229> @ /sig/?/?/vbf_novhh_l10cvv1cv1/bbtautau;
+<processID =  270> @ /sig/?/?/vbf_novhh_l1cvv1cv0p5/bbtautau;
+<processID =  271> @ /sig/?/?/vbf_novhh_l1cvv1cv1p5/bbtautau;
+<processID =  272> @ /sig/?/?/vbf_novhh_l0cvv0cv1/bbtautau;
+
+<processID =  231> @ /sig/?/?/vbf_novhh_l1cvv1cv1/bbZZ/2l2v;
+<processID =  283> @ /sig/?/?/vbf_novhh_l1cvv1cv1/bbZZ/2l2q;
+<processID =  232> @ /sig/?/?/vbf_novhh_l1cvv0cv1/bbZZ;
+<processID =  233> @ /sig/?/?/vbf_novhh_l1cvv0p5cv1/bbZZ;
+<processID =  234> @ /sig/?/?/vbf_novhh_l1cvv1p5cv1/bbZZ;
+<processID =  235> @ /sig/?/?/vbf_novhh_l1cvv2cv1/bbZZ;
+<processID =  236> @ /sig/?/?/vbf_novhh_l1cvv3cv1/bbZZ;
+<processID =  237> @ /sig/?/?/vbf_novhh_l0cvv1cv1/bbZZ;
+<processID =  238> @ /sig/?/?/vbf_novhh_l2cvv1cv1/bbZZ;
+<processID =  239> @ /sig/?/?/vbf_novhh_l10cvv1cv1/bbZZ;
+<processID =  280> @ /sig/?/?/vbf_novhh_l1cvv1cv0p5/bbZZ;
+<processID =  281> @ /sig/?/?/vbf_novhh_l1cvv1cv1p5/bbZZ;
+<processID =  282> @ /sig/?/?/vbf_novhh_l0cvv0cv1/bbZZ;
+<processID = 1100> @ /sys/?/?/top/ttbar_fastsim;
+<processID = 1101> @ /sys/?/?/top/ttbar_PowhegHerwig7;
+<processID = 1102> @ /sys/?/?/top/ttbar_aMCatNLOPythia8;
+<processID = 1103> @ /sys/?/?/top/ttbar_hdamp517p5;
+<processID = 1104> @ /sys/?/?/top/stop_PowhegPythia8_DS/Wt;
+<processID = 1110> @ /sys/?/?/Zee/MGPy8;
+<processID = 1111> @ /sys/?/?/Zmm/MGPy8;
