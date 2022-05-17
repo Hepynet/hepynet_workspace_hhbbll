@@ -1,0 +1,14 @@
+config:
+    include:
+        - "share/input/multi_node_sr1_vv.in.yaml"
+        - "share/input/pdnn.in.yaml"
+        - "share/train/pdnn_sr1_vv.tr.yaml"
+
+job:
+    job_name: "pdnn_sr1_vv"
+    job_type: "train"
+    save_dir: "run/pdnn_sr1_vv"
+
+#input:
+#    bkg_sumofweight: 100000
+#    sig_sumofweight: 100000

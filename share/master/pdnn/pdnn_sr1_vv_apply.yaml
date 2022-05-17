@@ -1,0 +1,156 @@
+config:
+    include:
+        - "share/master/pdnn/pdnn_sr1_vv_train.yaml"
+
+job:
+    job_name: "pdnn_sr1_vv_apply"
+    job_type: "apply"
+    train_job_name: "pdnn_sr1_vv"
+
+input:
+    # only remove negative events for training
+    negative_weight_process: "keep"
+    # don't reset background events' physic parameter when apply pDNN
+    reset_feature: false
+
+apply:
+    plot_atlas_label: True
+    atlas_label:
+        status: "internal"
+        #simulation: "true"
+        energy: "13 TeV"
+        lumi: 139
+        desc: $HH\rightarrow bbl\nu l\nu$, SR1
+
+    check_model_epoch: true
+    epoch_check_interval: 5
+
+    book_history: true
+    cfg_history:
+        accuracy:
+            plot_title: "accuracy history"
+            save_format: "png"
+        loss:
+            plot_title: "loss history"
+            save_format: "png"
+
+    #book_kine: true
+    cfg_kine:
+        bins: 40
+        separate_bkg_sig: false
+        hist_kwargs_sig:
+            histtype: "step"
+            density: true
+        hist_kwargs_bkg:
+            histtype: "stepfilled"
+            density: true
+        save_format: "png"
+
+    #book_cor_matrix: true
+
+    # Studies depending on models
+    
+    book_roc: true
+
+    book_train_test_compare: true
+    cfg_train_test_compare:
+        plot_title: "train/test MVA scores compare"
+        bins: 25
+        range: [0, 1]
+        density: true
+        log: true
+        save_format: "png"
+
+    book_mva_scores_data_mc: true
+    cfg_mva_scores_data_mc:
+        sig_list:
+            - "sig_res_251_bbWW+sig_res_251_bbtautau+sig_res_251_bbZZ:m_251"
+            - "sig_res_260_bbWW+sig_res_260_bbtautau+sig_res_260_bbZZ:m_260"
+            - "sig_res_300_bbWW+sig_res_300_bbtautau+sig_res_300_bbZZ:m_300"
+            - "sig_res_400_bbWW+sig_res_400_bbtautau+sig_res_400_bbZZ:m_400"
+            - "sig_res_500_bbWW+sig_res_500_bbtautau+sig_res_500_bbZZ:m_500"
+            - "sig_res_600_bbWW+sig_res_600_bbtautau+sig_res_600_bbZZ:m_600"
+            - "sig_res_800_bbWW+sig_res_800_bbtautau+sig_res_800_bbZZ:m_800"
+            - "sig_res_1000_bbWW+sig_res_1000_bbtautau+sig_res_1000_bbZZ:m_1000"
+        bkg_list:
+            - "bkg_nonprompt+bkg_prompt_Higgs+bkg_prompt_diboson:other"
+            - "bkg_prompt_Zee+bkg_prompt_Zmm+bkg_prompt_Ztt:Zll"
+            - "bkg_prompt_top_ttbar+bkg_prompt_top_stop+bkg_prompt_top_ttbarV:top"
+        apply_data: false
+        apply_data_range:
+        bins: 40
+        range: [0, 1]
+        density: true
+        sig_scale:
+            sig_res_251_bbWW: 5500
+            sig_res_260_bbWW: 5300
+            sig_res_300_bbWW: 4400
+            sig_res_400_bbWW: 3100
+            sig_res_500_bbWW: 2400
+            sig_res_600_bbWW: 2000
+            sig_res_800_bbWW: 1700
+            sig_res_1000_bbWW: 1600
+            sig_res_251_bbtautau: 5500
+            sig_res_260_bbtautau: 5300
+            sig_res_300_bbtautau: 4400
+            sig_res_400_bbtautau: 3100
+            sig_res_500_bbtautau: 2400
+            sig_res_600_bbtautau: 2000
+            sig_res_800_bbtautau: 1700
+            sig_res_1000_bbtautau: 1600
+            sig_res_251_bbZZ: 5500
+            sig_res_260_bbZZ: 5300
+            sig_res_300_bbZZ: 4400
+            sig_res_400_bbZZ: 3100
+            sig_res_500_bbZZ: 2400
+            sig_res_600_bbZZ: 2000
+            sig_res_800_bbZZ: 1700
+            sig_res_1000_bbZZ: 1600
+        log: true
+        save_format: "png"
+
+    book_mva_shape: true
+    cfg_mva_shape:
+        process_list:
+            #- "sig_res_251_bbWW+sig_res_251_bbtautau+sig_res_251_bbZZ:m_251"
+            - "sig_res_260_bbWW+sig_res_260_bbtautau+sig_res_260_bbZZ:m_260"
+            #- "sig_res_300_bbWW+sig_res_300_bbtautau+sig_res_300_bbZZ:m_300"
+            - "sig_res_400_bbWW+sig_res_400_bbtautau+sig_res_400_bbZZ:m_400"
+            #- "sig_res_500_bbWW+sig_res_500_bbtautau+sig_res_500_bbZZ:m_500"
+            - "sig_res_600_bbWW+sig_res_600_bbtautau+sig_res_600_bbZZ:m_600"
+            #- "sig_res_800_bbWW+sig_res_800_bbtautau+sig_res_800_bbZZ:m_800"
+            - "sig_res_1000_bbWW+sig_res_1000_bbtautau+sig_res_1000_bbZZ:m_1000"
+            - "bkg_nonprompt+bkg_prompt_Higgs+bkg_prompt_diboson:other"
+            - "bkg_prompt_Zee+bkg_prompt_Zmm+bkg_prompt_Ztt:Zll"
+            - "bkg_prompt_top_ttbar+bkg_prompt_top_stop+bkg_prompt_top_ttbarV:top"
+        bins: 20
+        range: [0, 1]
+        log: true
+        logy_min: 0.01
+        legend_paras:
+            ncol: 2
+        save_format: "png"
+
+    book_significance_scan: true
+    cfg_significance_scan:
+        significance_algo: "s_sqrt_sb_rel"
+
+    #book_cut_kine_study: true
+    cfg_cut_kine_study:
+        bins: 25
+        range:
+        histtype: "stepfilled"
+        alpha: 0.3
+        density: true
+        save_format: "png"
+        save_ratio_table: true
+        node_nums: [0, 1, 2]
+        dnn_cut_list:
+            - 0.2
+            - 0.4
+            - 0.6
+            - 0.8
+
+    book_importance_study: true
+    cfg_importance_study:
+        log: false

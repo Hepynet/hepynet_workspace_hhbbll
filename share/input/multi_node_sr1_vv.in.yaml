@@ -1,0 +1,92 @@
+# SR1 + VBF veto
+
+input:
+    input_path: "/data1/LOCAL/yangz/hh_bbll_mva/data_frames/22_0512_res/2tag_sr1.feather"
+    norm_array: true
+    bkg_key: "all"
+    sig_key: "all"
+    bkg_sumofweight: 20000000
+    sig_sumofweight: 20000000
+
+    cut_expression: "vbf_veto == 1"
+
+    custom_sample_scale:
+        sig_res_251_bbWW: 5.5
+        sig_res_260_bbWW: 5.3
+        sig_res_300_bbWW: 4.4
+        sig_res_400_bbWW: 3.1
+        sig_res_500_bbWW: 2.4
+        sig_res_600_bbWW: 2.0
+        sig_res_800_bbWW: 1.7
+        sig_res_1000_bbWW: 1.6
+        sig_res_251_bbtautau: 5.5
+        sig_res_260_bbtautau: 5.3
+        sig_res_300_bbtautau: 4.4
+        sig_res_400_bbtautau: 3.1
+        sig_res_500_bbtautau: 2.4
+        sig_res_600_bbtautau: 2.0
+        sig_res_800_bbtautau: 1.7
+        sig_res_1000_bbtautau: 1.6
+        sig_res_251_bbZZ: 5.5
+        sig_res_260_bbZZ: 5.3
+        sig_res_300_bbZZ: 4.4
+        sig_res_400_bbZZ: 3.1
+        sig_res_500_bbZZ: 2.4
+        sig_res_600_bbZZ: 2.0
+        sig_res_800_bbZZ: 1.7
+        sig_res_1000_bbZZ: 1.6
+        #sig_res_300_bbWW: 5
+        #sig_res_300_bbtautau: 5
+        #sig_res_300_bbZZ: 5
+        #sig_res_400_bbWW: 5
+        #sig_res_400_bbtautau: 5
+        #sig_res_400_bbZZ: 5
+        #bkg_prompt_top_ttbar: 10
+        #bkg_prompt_top_stop: 10
+        #bkg_prompt_top_ttbarV: 10
+        bkg_nonprompt: 50
+        bkg_prompt_Higgs: 50
+        bkg_prompt_diboson: 50
+        bkg_prompt_Zee: 50
+        bkg_prompt_Zmm: 50
+        bkg_prompt_Ztt: 50
+
+    multi_label:
+        0:
+            - "bkg_prompt_Zee"
+            - "bkg_prompt_Zmm"
+            - "bkg_prompt_Ztt"
+            - "bkg_prompt_diboson"
+            - "bkg_nonprompt"
+            - "bkg_ddFakes_data"
+            - "bkg_ddFakes_mc_prompt"
+            - "bkg_prompt_Higgs"
+        1:
+            - "sig_res_251_bbWW"
+            - "sig_res_260_bbWW"
+            - "sig_res_300_bbWW"
+            - "sig_res_400_bbWW"
+            - "sig_res_500_bbWW"
+            - "sig_res_600_bbWW"
+            - "sig_res_800_bbWW"
+            - "sig_res_1000_bbWW"
+            - "sig_res_251_bbtautau"
+            - "sig_res_260_bbtautau"
+            - "sig_res_300_bbtautau"
+            - "sig_res_400_bbtautau"
+            - "sig_res_500_bbtautau"
+            - "sig_res_600_bbtautau"
+            - "sig_res_800_bbtautau"
+            - "sig_res_1000_bbtautau"
+            - "sig_res_251_bbZZ"
+            - "sig_res_260_bbZZ"
+            - "sig_res_300_bbZZ"
+            - "sig_res_400_bbZZ"
+            - "sig_res_500_bbZZ"
+            - "sig_res_600_bbZZ"
+            - "sig_res_800_bbZZ"
+            - "sig_res_1000_bbZZ"
+        2:
+            - "bkg_prompt_top_ttbar"
+            - "bkg_prompt_top_stop"
+            - "bkg_prompt_top_ttbarV"

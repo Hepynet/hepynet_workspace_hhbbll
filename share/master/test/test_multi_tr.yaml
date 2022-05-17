@@ -1,0 +1,13 @@
+config:
+    include:
+        - "share/input/test_multilabel.sec_in.yaml"
+        - "share/train/test_multilabel.sec_tr.yaml"
+
+job:
+    job_name: "test_multilabel_tr"
+    job_type: "train"
+    save_dir: "run/test_multilabel"
+
+#input:
+#    bkg_sumofweight: 100000
+#    sig_sumofweight: 100000

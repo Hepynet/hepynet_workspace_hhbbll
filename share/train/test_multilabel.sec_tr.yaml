@@ -1,0 +1,38 @@
+# default train config for high mass region
+# should be updated with the newest tuning
+
+train:
+    model_name: "test_bbll_pdnn"
+    model_class: "Model_Sequential_Flat"
+    use_multi_label: true
+    layers: 5
+    nodes: 256
+    dropout_rate: 0
+    momentum: 0.5
+    nesterov: true
+    test_rate: .2
+    val_split: .25
+    #k_folds: 5
+    learn_rate: 0.1
+    learn_rate_decay: 0.01
+    batch_size: 512
+    epochs: 5
+    #sig_class_weight: 1.03972 # use bkg_sumofweight to have consistent metrics between train and val
+    #bkg_class_weight: 19.0625 # use sig_sumofweight to have consistent metrics between train and val
+    train_metrics_weighted:
+        - "accuracy"
+        - "auc"
+
+    # early stop setups
+    use_early_stop: true
+    early_stop_paras:
+        monitor: "val_auc"
+        min_delta: 0.0005
+        patience: 3
+        mode: "max"
+        restore_best_weights: true
+
+    # save model or not
+    save_model: true
+
+    verbose: 1
